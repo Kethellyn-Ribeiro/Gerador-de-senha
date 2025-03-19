@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Gerador de Senhas 🔒</h2>
+        <label for="tamanho">Tamanho da senha:</label>
+        <input type="number" id="tamanho" value="12" min="4" max="32">
+
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="maiusculas" checked> Letras Maiúsculas</label>
+            <label><input type="checkbox" id="minusculas" checked> Letras Minúsculas</label>
+            <label><input type="checkbox" id="numeros" checked> Números</label>
+            <label><input type="checkbox" id="especiais"> Caracteres Especiais</label>
+        </div>
+
+        <button onclick="gerarSenha()">Gerar Senha</button>
+
+        <h3>Senha Gerada:</h3>
+        <p id="senhaGerada"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
